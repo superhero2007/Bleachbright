@@ -9,3 +9,303 @@ $screen-lg-min: 992px;
 
 // Large tablets and desktops
 $screen-xl-min: 1200px;
+
+.home {
+  &-section1 {
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    width: 100%;
+    position: relative;
+
+    &__content {
+      font-family: 'Titillium Web', sans-serif;
+      color: #FFF;
+      font-size: 30px;
+      font-weight: 600;
+      font-style: italic;
+      padding: 20px;
+      margin: 0;
+      background: rgba(42, 100, 145, 0.8);
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+    }
+  }
+
+  &-section2 {
+    width: 100%;
+    padding: 60px 0;
+    background-repeat: repeat;
+
+    &__content {
+      width: 100%;
+      max-width: 1140px;
+      padding: 10px 20px;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-item {
+        img {
+          width: 100%;
+        }
+
+        .hover {
+          display: none;
+        }
+
+        &:hover {
+          .hover {
+            display: inline;
+          }
+
+          .origin {
+            display: none;
+          }
+        }
+
+        & + & {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  &-section3 {
+    width: 100%;
+    padding: 50px 0;
+    background-size: cover;
+    background-position: center;
+
+    &__content {
+      width: 100%;
+      max-width: 1140px;
+      padding: 10px 20px;
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .title {
+        color: #FFF;
+        font-family: 'Alegreya', serif;
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 5px;
+        margin-bottom: 15px;
+      }
+
+      &-left {
+        width: 66%;
+
+        &__content {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          img {
+            width: 50%;
+          }
+
+          &-description {
+            &__title1 {
+              font-family: 'Titillium Web', sans-serif;
+              font-size: 30px;
+              font-weight: 300;
+              color: #b4d4fa;
+            }
+
+            &__title2 {
+              color: #FFF;
+              font-family: 'Titillium Web', sans-serif;
+              font-size: 30px;
+              font-weight: 600;
+            }
+
+            &__title3 {
+              font-family: 'Titillium Web', sans-serif;
+              font-size: 24px;
+              font-weight: 400;
+              color: #b4d4fa;
+            }
+
+            &__content {
+              padding-left: 30px;
+              margin-top: 5px;
+              margin-bottom: 5px;
+
+              &-item {
+                font-family: 'Titillium Web', sans-serif;
+                font-weight: 400;
+                color: #FFF;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+
+      &-right {
+        width: 33%;
+        &__description {
+          font-family: 'Titillium Web', sans-serif;
+          font-weight: 400;
+          color: #FFF;
+          font-size: 18px;
+          margin-top: 5px;
+          margin-bottom: 15px;
+          text-align: justify;
+        }
+
+        &__button {
+          font-family: 'Titillium Web', sans-serif!important;
+          color: #b4d4fa;
+          font-size: 22px;
+          border: none;
+          background: none;
+          cursor: pointer;
+          display: inline-block;
+          margin-top: 10px;
+          letter-spacing: 1px;
+          font-weight: 400;
+          position: relative;
+          transition: all 0.3s;
+          text-decoration: none;
+          background: #063d83;
+          padding: 16px 135px 16px 20px;
+          overflow: hidden;
+
+          &:before {
+            content: "\f061";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            line-height: 3;
+            font-size: 100%;
+            width: 60px;
+            right: 5px;
+            z-index: 2;
+          }
+
+          &:after {
+            content: '';
+            position: absolute;
+            transition: all 0.3s;
+            width: 30%;
+            height: 200%;
+            background: rgba(255,255,255,0.1);
+            z-index: 1;
+            right: 0;
+            top: 0;
+            margin: -5px 0 0 -5px;
+            transform-origin: 0 0;
+            transform: rotate(-20deg);
+          }
+
+          &:hover {
+            color: #C4E4FB;
+
+            &:after {
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-xl-min) {
+  .home {
+    &-section3 {
+      &__content {
+        &-left {
+          width: 50%;
+          &__content {
+            display: block;
+            img {
+              width: 80%;
+            }
+          }
+        }
+        
+        &-right {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md-min) {
+  .home {
+    &-section1 {
+      &__content {
+        font-size: 18px;
+        padding: 10px;
+      }
+    }
+
+    &-section2 {
+      &__content {
+        display: block;
+
+        &-item {
+          width: 100%;
+          max-width: 350px;
+          display: block;
+          margin: 0 auto;
+
+          img {
+            width: 100%;
+          }
+
+          & + & {
+            margin-left: auto;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+
+    &-section3 {
+      &__content {
+        display: block;
+        &-left {
+          width: 100%;
+          text-align: center;
+          &__content {
+            display: block;
+            img {
+              width: 80%;
+            }
+            &-description__content {
+              display: inline-block;
+
+              &-item {
+                width: fit-content;
+              }
+            }
+          }
+        }
+
+        &-right {
+          width: 80%;
+          margin: 0 auto;
+          text-align: center;
+
+          &__description {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
