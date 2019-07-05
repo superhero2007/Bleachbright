@@ -1,0 +1,120 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+.header {
+  width: 100%;
+  height: 150px;
+  background-color: #4a7fc0;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1140px;
+    width: 100%;
+    padding: 30px 20px;
+    margin: 0 auto;
+
+    &-logo {
+
+    }
+
+    &-menu {
+      text-align: right;
+
+      &__content {
+        margin-top: 10px;
+
+        &-item {
+          font-family: 'Titillium Web', sans-serif;
+          text-decoration: none;
+          font-weight: 400;
+          color: #FFF;
+          font-size: 18px;
+          text-transform: uppercase;
+          transition: all 0.4s;
+
+          &.active,
+          &:hover {
+            color: #b4d4fa;
+          }
+
+          & + & {
+            margin-left: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-lg-min) {
+  .header {
+    position: relative;
+    &__content {
+      &-logo {
+        margin-top: -20px;
+      }
+
+      &-menu {
+        &__content {
+          position: absolute;
+          bottom: 10px;
+          right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md-min) {
+  .header {
+    height: auto;
+
+    &__content {
+      display: block;
+
+      &-logo {
+        margin-top: 0;
+        margin-bottom: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      &-menu {
+        &__content {
+          position: unset;
+
+          &-item {
+            background: #063d83;
+            font-style: normal;
+            font-size: 18px;
+            padding: 10px !important;
+            margin-bottom: 10px;
+            width: 100%;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            text-align: center;
+            display: block;
+
+            & + & {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

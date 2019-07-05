@@ -10,6 +10,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Header from 'components/Header';
@@ -26,12 +27,16 @@ class LandingPage extends React.PureComponent {
   render() {
     return (
       <Wrapper className="wrapper">
-        <Header />
+        <Header location={this.props.location} />
         <div>Wrapper</div>
         <Footer />
       </Wrapper>
     );
   }
 }
+
+LandingPage.propTypes = {
+  location: PropTypes.object,
+};
 
 export default LandingPage;
