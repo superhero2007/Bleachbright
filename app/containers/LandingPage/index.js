@@ -29,7 +29,7 @@ class LandingPage extends React.PureComponent {
       <Wrapper className="wrapper">
         <Header location={this.props.location} />
         <div>Wrapper</div>
-        <Footer />
+        <Footer location={this.props.location} />
       </Wrapper>
     );
   }
