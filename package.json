@@ -78,7 +78,9 @@
     "lodash": "4.17.11",
     "minimist": "1.2.0",
     "moment": "2.18.1",
+    "normalize.css": "^8.0.1",
     "prop-types": "15.6.2",
+    "raw-loader": "^3.0.0",
     "react": "^16.6.0",
     "react-color": "^2.17.1",
     "react-dom": "16.6.0",
@@ -92,7 +94,8 @@
     "reselect": "4.0.0",
     "sanitize.css": "4.1.0",
     "styled-components": "4.0.2",
-    "warning": "4.0.2"
+    "warning": "4.0.2",
+    "xml-loader": "^1.2.1"
   },
   "devDependencies": {
     "@babel/cli": "7.1.2",

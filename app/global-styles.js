@@ -13,12 +13,19 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased
   }
 
-  body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  html,
+  button,
+  input,
+  select,
+  textarea {
+    color: #5f5f5f;
   }
 
-  body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  body {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4;
   }
 
   #app {
@@ -27,18 +34,18 @@ const GlobalStyle = createGlobalStyle`
     min-width: 100%;
   }
 
-  p,
-  label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.5em;
-  }
-  
-  .icon {
-    font-family: 'icons';
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
   }
   
   :focus {
     outline: 0;
+  }
+
+  textarea {
+    resize: vertical;
   }
 `;
 

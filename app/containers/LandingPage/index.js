@@ -48,7 +48,7 @@ class LandingPage extends React.PureComponent {
           style={{ backgroundImage: `url(${CoupleSmile})` }}
         >
           <div className="home-section1__content">
-            Teeth whitening at the speed of light
+            <div>Teeth whitening at the speed of light</div>
           </div>
         </section>
         <section

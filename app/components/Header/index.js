@@ -13,7 +13,9 @@ const Header = props => (
         <img src={Logo} alt="Logo" />
       </Link>
       <div className="header__content-menu">
-        <img src={Address} alt="Address" />
+        <a href="mailto:montana@bleachbright.com.au, warren@warrenlee.net.au">
+          <img src={Address} alt="Address" />
+        </a>
         <div className="header__content-menu__content">
           <Link
             to="/"

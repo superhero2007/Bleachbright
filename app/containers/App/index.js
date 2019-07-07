@@ -11,6 +11,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import LandingPage from 'containers/LandingPage/Loadable';
+import WhereToBuy from 'containers/WhereToBuy/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import GlobalStyle from '../../global-styles';
 
@@ -21,6 +22,7 @@ class App extends React.Component {
       <div>
         <Switch>
           <Route exact path="/" component={LandingPage} />
+          <Route exact path="/where-to-buy" component={WhereToBuy} />
           <Route component={NotFoundPage} />
         </Switch>
         <GlobalStyle />

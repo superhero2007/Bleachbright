@@ -16,7 +16,8 @@ $screen-xl-min: 1200px;
     background-position: center;
     height: 450px;
     width: 100%;
-    position: relative;
+    display: flex;
+    align-items: flex-end;
 
     &__content {
       font-family: 'Titillium Web', sans-serif;
@@ -24,13 +25,15 @@ $screen-xl-min: 1200px;
       font-size: 30px;
       font-weight: 600;
       font-style: italic;
-      padding: 20px;
-      margin: 0;
-      background: rgba(42, 100, 145, 0.8);
-      display: inline-block;
-      position: absolute;
-      bottom: 0;
-      left: 20px;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-end;
+      div {
+        background: rgba(42, 100, 145, 0.8);
+        padding: 20px;
+      }
     }
   }
 
